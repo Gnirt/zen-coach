@@ -1,0 +1,35 @@
+<div class="header">
+  <h1>Habits list</h1>
+  <h2>List of all your habits</h2>
+</div>
+<div class="content">
+  <%= link_to new_habit_path, class: 'pure-button button-success' do %>
+  <i class="fa fa-plus"></i>
+  New habit
+  <% end %>
+  <table class="pure-table pure-table-horizontal">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Current Streak</th>
+        <th>Longest Streak</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @habits.each do |habit| %>
+      <tr>
+        <td><%= habit.id %></td>
+        <td><%= habit.name %></td>
+        <td><%= habit.current_streak %></td>
+        <td><%= habit.longest_streak %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to new_habit_path, class: 'pure-button button-success' do %>
+  <i class="fa fa-plus"></i>
+  New habit
+  <% end %>
+</div>
