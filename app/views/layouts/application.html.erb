@@ -13,7 +13,7 @@
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= body_class %>">
+<body class="<%= body_class %> <%= 'sign_in' if user_signed_in? %>">
   <div id="layout">
     <% if user_signed_in? %>
     <%= render partial: "layouts/menu" %>

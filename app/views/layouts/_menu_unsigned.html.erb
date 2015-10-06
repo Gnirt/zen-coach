@@ -1,12 +1,12 @@
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Zen Coach</a>
-
+        <%= link_to 'Zen Coach', root_path, class: 'pure-menu-heading' %>
         <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-            <li class="pure-menu-item">About<%# link_to 'About', page_path('about'), class: 'pure-menu-link' %></li>
-            <li class="pure-menu-item"><%= link_to 'Sign Up', new_user_registration_path(), class: 'pure-menu-link' %></li>
+            <li class="pure-menu-item"><%= link_to 'Home', root_path, class: 'pure-menu-link' %></li>
+            <li class="pure-menu-item"><%= link_to 'Tour', tour_path, class: 'pure-menu-link' %></li>
+            <li class="pure-menu-item"><%= link_to 'About', about_path, class: 'pure-menu-link' %></li>
+            <li class="pure-menu-item"><%= link_to 'Register', new_user_registration_path, class: 'pure-menu-link' %></li>
+            <li class="pure-menu-item"><%= link_to 'Sign In', new_user_session_path, class: 'pure-menu-link' %></li>
         </ul>
     </div>
 </div>
