@@ -1,8 +1,11 @@
 class WelcomeController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :tour, :about]
+  skip_before_action :authenticate_user!
   def index
   end
 
   def about
+  end
+
+  def tour
   end
 end
