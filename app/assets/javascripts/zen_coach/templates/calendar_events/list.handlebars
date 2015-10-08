@@ -1,0 +1,13 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each calendar_events}}
+    {{view ZenCoach.ShowCalendarEventView calendar_eventBinding="this"}}
+  {{/each}}
+  </tbody>
+</table>

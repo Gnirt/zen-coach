@@ -12,4 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ember
+//= require ember-data
+//= require active-model-adapter
+//= require_self
+//= require_tree ./zen_coach/models
+//= require_tree ./zen_coach/controllers
+//= require_tree ./zen_coach/views
+//= require_tree ./zen_coach/helpers
+//= require_tree ./zen_coach/templates
+
+// for more details see: http://emberjs.com/guides/application/
+ZenCoach = Ember.Application.create();
+
 //= require_tree .

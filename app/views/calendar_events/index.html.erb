@@ -1,7 +1,15 @@
 <div class="header">
   <h1>Calendar</h1>
-  <h2>yes</h2>
+  <h2>count <%= @calendar_events.count %></h2>
 </div>
 <div class="content">
+  <script type="text/x-handlebars">
+    {{ view ZenCoach.ListCalendarEventsView }}
+  </script>
 
+  <script type="text/javascript">
+    $(function() {
+      ZenCoach.CalendarEventsController.loadAll(<%= @calendar_events.to_json.html_safe %>);
+    });
+  </script>
 </div>
