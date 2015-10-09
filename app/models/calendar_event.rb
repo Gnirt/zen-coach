@@ -3,7 +3,7 @@ class CalendarEvent < ActiveRecord::Base
   belongs_to :habit
 
   validate :habit_must_be_unique_today
-  validate :name, presence: true
+  validates :name, presence: true
 
   def habit_must_be_unique_today
     if habit.present? && habit.created_at.to_date == Date.today
