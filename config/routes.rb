@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/about', to: 'welcome#about'
   get '/tour', to: 'welcome#tour'
   resources :habits
-  resources :calendar_events
+  resources :calendar_events, only: :index
 end
