@@ -1,0 +1,6 @@
+.title CalendarEventsListWithBackbone
+.calendar_events
+  = hb('each .') do
+    .calendar_event
+      .name= hb('name')
+      .event_type= hb('event_type')
